@@ -27,6 +27,7 @@ main {
     margin-left: 10px;
 }
 aside {
+    width: 100%;
     max-width: 822px;
     margin: 0;
     border: 0px solid rgb(0 0 0 / 0.2);
