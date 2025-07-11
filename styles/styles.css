@@ -25,10 +25,9 @@ p {
 main {
     max-width: 822px;
     margin-left: 10px;
-    
 }
 aside {
-    width: 822px;
+    max-width: 822px;
     margin: 0;
     border: 0px solid rgb(0 0 0 / 0.2);
     padding: 1px 8px;
