@@ -14,12 +14,12 @@ img {
     width: 150px;
     height: auto;
     border:0.1px solid black;
-    padding: 0px; 
+    padding: 1px; 
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 p {
-    padding: 0px;
+    padding: 1px;
 }
 
 main {
