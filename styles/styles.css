@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+
+}
 nav {
     background-color: var(--primary-color);
     padding: var(--nav-padding);
@@ -25,7 +30,7 @@ nav {
 nav a {
     color: var(--text-light);
     display: block;
-    padding: 20px;
+    padding: 10px 15px;
 }
 
 h1 {
@@ -78,6 +83,7 @@ main img {
     width: var(--image-width);
     height: auto;
     float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 footer {
@@ -89,7 +95,7 @@ footer {
 /* Class Selectors */
 .box{
     margin: 2px;
-    border: 1px solid rgb(0, 0, 0/10%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: var(--padding-medium);
     background-color: #dfdede;
     color: #000;
