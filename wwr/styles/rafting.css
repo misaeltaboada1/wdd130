@@ -1,0 +1,88 @@
+:root{
+    --primary-color: #132853;
+    --secondary-color: #A9C8DA;
+    --acent-color: #E3921A;
+    --acent2-color: #196FB7; 
+    --heading-font: 'Bebas Neue', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: var(--primary-color);
+    color: var(--acent-color);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--body-font);      /*La letra                              (this is to me brother) */
+    color: var(--acent-color);
+}
+
+header, main , footer{
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1, h2{
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav, p, section, article{
+    margin: 16px;
+    padding: 8px;
+}
+
+p{
+    color: black;
+}
+
+.socialmedia a{
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;  
+    width: 100%;
+    padding: 16px;
+    text-align: center; 
+    opacity: 0.7;
+    background-color: var(--acent-color);
+    color: #ffffff;
+    font-size: 70px; 
+}
+
+
+article {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    max-width: 700px;
+}
+
+
+.hero article img {
+    float: right;
+    width: 125px;
+}
+
+
