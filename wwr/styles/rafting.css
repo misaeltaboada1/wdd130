@@ -39,6 +39,10 @@ nav, p, section, article{
     padding: 8px;
 }
 
+nav a {
+    color: white;
+}
+
 p{
     color: black;
 }
