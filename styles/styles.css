@@ -3,7 +3,7 @@
     --primary-color: darkblue;
     --text-light: #ffffff;
     --border-dark: #000;
-    --image-width: 150px;
+    --image-width: 200px;
     --shadow-color: rgba(0, 0, 0, 0.07);
     --border-radius: 8px;
     --max-width: 822px;
@@ -26,17 +26,26 @@ body {
 nav {
     background-color: var(--primary-color);
     padding: var(--nav-padding);
+    display: flex;
+
+    justify-content: space-around;
+    
 }
 
 nav a {
     color: var(--text-light);
     display: block;
     padding: 10px 15px;
+    text-decoration: none;
+    font-size: large;
 }
 
 h1 {
     color: var(--primary-color);
-    font-family:  'Bradley Hand''Rock Salt', cursive;
+    font-family:  'Bradley Hand', cursive;
+    border-bottom: #000 solid 2px;
+    text-align: center;
+    margin-top: -2rem;
 }
 
 img {
@@ -46,14 +55,17 @@ img {
     padding: var(--padding-small); 
     border-radius: var(--border-radius);
     box-shadow: 0 2px 8px var(--shadow-color);
+    display: block;
+    margin: 0 auto;
 }
 
 p {
-    padding: 0;
+    padding: var(--padding-medium);
 }
 
 main {
-    max-width: var(--max-width);
+    
+    margin: 0 auto;
     margin-left: 10px;
 }
 
@@ -73,7 +85,7 @@ aside h2 {
     color: var(--primary-color);
     position: absolute;
     top: 17px;
-    left: 122px;
+    left: 174px;
 }
 
 aside img {
@@ -85,7 +97,7 @@ main img {
     width: var(--image-width);
     height: auto;
     float: right;
-    margin: 0 0 1rem 1rem;
+    margin: 1rem;
 }
 
 footer {
@@ -102,3 +114,33 @@ footer {
     background-color: #dfdede;
     color: #000;
 }
+
+header, .grid ,footer{
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+}
+
+main{
+    grid-column: 3/3;
+    grid-row: 1/2;
+    margin: 1rem;
+}
+
+aside{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 20rem ;
+    position: relative;
+}
+
+ul.box {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+
