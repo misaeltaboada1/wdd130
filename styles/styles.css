@@ -101,7 +101,7 @@ main img {
 }
 
 footer {
-    margin-top: 15px;
+    margin-top: 150px;
     border-top: 1px solid var(--border-dark);
     text-align: center;
 }
@@ -142,5 +142,4 @@ ul.box {
     list-style-position: inside;
     padding-left: 1rem;
 }
-
 
