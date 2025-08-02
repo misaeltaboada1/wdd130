@@ -193,6 +193,7 @@ footer {
     width: 840px;           /* Igual que el footer */
     margin: 0 auto;         /* Centrarlo como el footer */
     border: 1px solid black;
+    border-top: none;
 }
 
 iframe {
@@ -290,4 +291,15 @@ button {
 
 .subscribe {
     text-align: center;
+}
+
+.contact-h1 {
+    position: static;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 3rem;
+    text-align: center;
+    opacity: 1;
+    border: solid 1px black;
+    border-bottom: none;
 }
