@@ -1,12 +1,14 @@
+/* -------------------- ROOT VARIABLES -------------------- */
 :root {
     --primary-color: #0077B6;   
     --secondary-color: #00B4D8;   
     --acent-color: #023047;     
     --acent2-color: #F0F4F8;      
-    --heading-font: 'Bebas Neue', sans-serif;
-    --body-font: 'Roboto', sans-serif;
+    --heading-font: 'Merienda', cursive;
+    --body-font: 'Lora', serif;
 }
 
+/* -------------------- GLOBAL RESET -------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -15,19 +17,22 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--acent-color);
+    color: black;
+    background-color: var(--acent2-color);
 }
 
+/* -------------------- LAYOUT STRUCTURE -------------------- */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
 }
 
+/* -------------------- HEADER -------------------- */
 header {
     background-color: var(--primary-color);
     color: var(--acent-color);
     display: grid;
-    grid-template-columns: 250px 1fr ;
+    grid-template-columns: 250px 1fr;
     align-items: center;
 }
 
@@ -44,13 +49,15 @@ header {
     gap: 24px;
     padding-right: 16px; 
 }
+
 .main-navigation a {
     color: white;
     text-decoration: none;
     font-family: var(--heading-font);
-    font-size:20px
+    font-size: 20px;
 }
 
+/* -------------------- HEADINGS -------------------- */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -68,17 +75,36 @@ h1 {
     font-size: 70px; 
 }
 
+/* -------------------- GENERAL ELEMENT SPACING -------------------- */
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
+}
+
+/* -------------------- SOCIAL MEDIA -------------------- */
+.socialmedia {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    align-items: center;
 }
 
 .socialmedia a {
     text-decoration: none;
 }
 
+.socialmedia img {
+    width: 40px;
+    height: 40px;
+}
+
+/* -------------------- HERO SECTION -------------------- */
 .hero {
     position: relative;
+}
+
+.hero p {
+    text-align: justify;
 }
 
 .hero img {
@@ -89,18 +115,21 @@ nav, p, section, article {
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 130px;
+    padding-top: 8px;
+    margin-left: 23px;
 }
 
 article {
     position: absolute;
-    top: 200px;
+    top: 180px;
     left: 50px;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     max-width: 700px;
 }
 
+/* -------------------- HISTORY SECTION -------------------- */
 .history {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -119,20 +148,20 @@ article {
 }
 
 .history p {
-    align-items: center;
-    justify-content: center;
     text-align: justify;
 }
 
 .history-image {
     max-width: 100%;
     height: auto;
-    padding-top:10px
+    padding-top: 25px;
+    border-radius: 15px;
 }
 
+/* -------------------- ADVENTURE SECTION -------------------- */
 .adventure {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 16px;
     text-align: center;
     align-items: start;
@@ -145,8 +174,7 @@ article {
 .adventure h2 {
     grid-column: 1 / 6;
     font-size: 36px;
-    margin-bottom: -5px;
-    margin-top: 5px;
+    margin: 5px 0 -5px 0;
 }
 
 .adventure img {
@@ -155,17 +183,7 @@ article {
     border-radius: 6px;
 }
 
-.socialmedia {
-    display: flex;
-    justify-content: end;
-    gap: 16px;
-    align-items: center;
-}
-.socialmedia img {
-    width: 40px;
-    height: 40px;
-}
-
+/* -------------------- FOOTER -------------------- */
 footer {
     display: grid; 
     grid-template-columns: 1fr 1fr;
@@ -173,15 +191,14 @@ footer {
     border: var(--acent-color) 1px solid;
 }
 
-/* CONTACT-INFOMATIONNNNNNNNNNNNN */
-
-.h2-contact{
-    font-size:xx-large;
+/* -------------------- CONTACT PAGE -------------------- */
+.h2-contact {
+    font-size: xx-large;
     text-align: center;
     padding: 10px;
 }
 
-.div-contact{
+.div-contact {
     display: grid;
     grid-template-columns: 17rem 17rem 17rem;
     text-align: center;
@@ -189,9 +206,13 @@ footer {
     font-size: large;
 }
 
+.contact-leyend {
+    color: var(--acent-color);
+}
+
 .company-info {
-    width: 840px;           /* Igual que el footer */
-    margin: 0 auto;         /* Centrarlo como el footer */
+    width: 840px;
+    margin: 0 auto;
     border: 1px solid black;
     border-top: none;
 }
@@ -204,8 +225,8 @@ iframe {
 
 .employee {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    gap:10px;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 10px;
     text-align: center;
     align-items: start;
     max-width: 840px;
@@ -222,7 +243,7 @@ iframe {
 
 .employee img {
     width: 250px; 
-    height: 180px; /* o el alto que quieras */
+    height: 180px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -233,9 +254,8 @@ figcaption {
     padding-bottom: 12px;
 }
 
-/* FORMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM */
-
-form{
+/* -------------------- FORM STYLES -------------------- */
+form {
     background-color: rgb(217, 217, 230);
     width: 500px;
     margin: auto;
@@ -273,9 +293,9 @@ legend {
 }
 
 textarea {
-    height: 4.5rem; /* Controlas visualmente el tamaño real */
+    height: 4.5rem;
     font-size: 1.1rem;
-    margin-top: -20px; /* Ajusta el margen superior para que se vea bien */
+    margin-top: -20px;
 }
 
 button {
@@ -302,4 +322,136 @@ button {
     opacity: 1;
     border: solid 1px black;
     border-bottom: none;
+}
+
+/* -------------------- HOME PAGE -------------------- */
+.section-index {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.section-index form {
+    font-size: larger;
+}
+
+.section-index legend {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.section-index label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.section-index input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.section-index button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* -------------------- CALL TO ACTION -------------------- */
+.cta {
+    text-align: center;
+    color: rgb(5, 0, 0);
+    font-family: var(--body-font);
+    font-size: large;
+}
+
+.cta h2 {
+    font-size: 3rem;
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* -------------------- INFO GRID -------------------- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.info-grid img {
+    width: 100%;
+    height: 16rem;
+    border-radius: 10px;
+}
+
+.info-grid p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: large;
+    color: black;
+}
+
+/* -------------------- TRIPS -------------------- */
+.trips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.trip {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--acent2-color);
+    overflow: hidden;
+    align-items: center;
+}
+
+.trip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trip h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.trip p {
+    margin: 0.5rem 0 0;
+}
+
+/* -------------------- TRIP TABLE -------------------- */
+.trip-table > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-header {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.trip-div {
+    color: var(--primary-color);
+    font-size: larger;
 }
